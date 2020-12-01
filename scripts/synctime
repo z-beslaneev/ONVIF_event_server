@@ -1,0 +1,62 @@
+#! /bin/bash
+
+if [ -e /dev/i2c-1 ]
+then echo -e "i2c-1 Interface is enable\n"
+else echo "i2c-1 Interface isn't enable"
+exit -1
+fi
+
+chmod o+w /sys/class/i2c-adapter/i2c-1/new_device
+
+if ! [ $? -eq 0 ]
+then echo -e "Can't change /sys/class/i2c-adapter/i2c-1/new_device permissions\n"
+exit -1
+fi
+
+echo ds3231 0x68 > /sys/class/i2c-adapter/i2c-1/new_device
+
+if ! [ $? -eq 0 ]
+then echo -e "Try to write /sys/class/i2c-adapter/i2c-1/new_device"
+#exit -1
+fi
+
+sleep 3
+
+echo "Current system date:"
+date
+
+echo "Current ds3231 date:"
+hwclock -r
+
+echo -e "\n"
+
+echo "======================================="
+echo "Syncronization..."
+echo "======================================="
+
+if ! grep -Pzo "echo ds3231 0x68 > /sys/class/i2c-adapter/i2c-1/new_device\nsleep 5\nhwclock -s" /etc/rc.local
+then sed -i ':a;N;$!ba;s/\nexit 0/echo ds3231 0x68 > \/sys\/class\/i2c-adapter\/i2c-1\/new_device\nsleep 5\nhwclock -s\nexit 0/' /etc/rc.local
+fi
+
+# Set system time in ds3231 from system
+hwclock -w
+
+echo -e "\n"
+
+echo "Current system date:"
+date
+
+echo "Current ds3231 date:"
+hwclock -r
+
+echo "Disable ntp"
+systemctl stop ntp.service
+systemctl disable ntp.service
+
+echo "Disable fake clock"
+systemctl stop fake-hwclock.service
+systemctl disable fake-hwclock.service
+
+
+
+

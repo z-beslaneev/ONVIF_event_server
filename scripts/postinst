@@ -1,0 +1,8 @@
+#!/bin/bash 
+
+sudo chmod +x /var/lib/SphinxDetectors/led_of
+sudo chmod +x /etc/init.d/SphinxDetectors_d
+sudo update-rc.d SphinxDetectors_d defaults
+sudo /etc/init.d/SphinxDetectors_d start
+sudo chmod +x /var/lib/SphinxDetectors/synctime
+sudo /var/lib/SphinxDetectors/synctime

@@ -1,0 +1,4 @@
+#! /bin/bash
+
+sudo bash -c 'echo "0" > /sys/class/gpio/gpio24/value'
+sudo bash -c 'echo "24" > /sys/class/gpio/unexport'

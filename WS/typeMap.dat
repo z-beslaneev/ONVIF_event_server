@@ -1,0 +1,63 @@
+
+xmime = "http://www.w3.org/2005/05/xmlmime"
+xop = "http://www.w3.org/2004/08/xop/include"
+
+wsa = "http://schemas.xmlsoap.org/ws/2004/08/addressing"
+wsa3 = "http://schemas.xmlsoap.org/ws/2003/03/addressing"
+wsa4 = "http://schemas.xmlsoap.org/ws/2004/03/addressing"
+wsa5 = "http://www.w3.org/2005/08/addressing"
+
+#---------------------------------------------------------
+# Customs for Onvif driver
+#---------------------------------------------------------
+
+# 3-rd party standarts.
+
+wsd = "http://schemas.xmlsoap.org/ws/2005/04/discovery"
+wsrfbf = "http://docs.oasis-open.org/wsrf/bf-2"
+wstop = "http://docs.oasis-open.org/wsn/t-1"
+wsrf = "http://docs.oasis-open.org/wsrf/r-2"
+wsnt = "http://docs.oasis-open.org/wsn/b-2"
+
+# Defined by Onvif.
+tt = "http://www.onvif.org/ver10/schema"
+tds = "http://www.onvif.org/ver10/device/wsdl"
+timg = "http://www.onvif.org/ver10/imaging/wsdl"
+timg2 = "http://www.onvif.org/ver20/imaging/wsdl"
+tptz = "http://www.onvif.org/ver10/ptz/wsdl"
+tptz2 = "http://www.onvif.org/ver20/ptz/wsdl"
+tanl = "http://www.onvif.org/ver10/analytics/wsdl"
+tanlre = "http://www.onvif.org/ver10/analytics/wsdl/RuleEngineBinding"
+tanlaeb = "http://www.onvif.org/ver10/analytics/wsdl/AnalyticsEngineBinding"
+tanl2 = "http://www.onvif.org/ver20/analytics/wsdl"
+tanl2re = "http://www.onvif.org/ver20/analytics/wsdl/RuleEngineBinding"
+tanl2aeb = "http://www.onvif.org/ver20/analytics/wsdl/AnalyticsEngineBinding"
+tev = "http://www.onvif.org/ver10/events/wsdl"
+tevpps = "http://www.onvif.org/ver10/events/wsdl/PullPointSubscriptionBinding"
+teveb = "http://www.onvif.org/ver10/events/wsdl/EventBinding"
+tevsmb = "http://www.onvif.org/ver10/events/wsdl/SubscriptionManagerBinding"
+tevnpb = "http://www.onvif.org/ver10/events/wsdl/NotificationProducerBinding"
+tevncb = "http://www.onvif.org/ver10/events/wsdl/NotificationConsumerBinding"
+tevppb = "http://www.onvif.org/ver10/events/wsdl/PullPointBinding"
+tevcppb = "http://www.onvif.org/ver10/events/wsdl/CreatePullPointBinding"
+tevpsmb = "http://www.onvif.org/ver10/events/wsdl/PausableSubscriptionManagerBinding"
+trt = "http://www.onvif.org/ver10/media/wsdl"
+tnet = "http://www.onvif.org/ver10/network/wsdl"
+tns1 = "http://www.onvif.org/ver10/topics"
+ter = "http://www.onvif.org/ver10/error"
+dn = "http://www.onvif.org/ver10/network/wsdl"
+tmk = "http://www.inforion.ru/schemas/sstmk/onvif/topics/sensors"
+
+trc = http://www.onvif.org/ver10/recording/wsdl
+trp = http://www.onvif.org/ver10/replay/wsdl
+tse = http://www.onvif.org/ver10/search/wsdl
+tmd = http://www.onvif.org/ver10/deviceIO/wsdl
+
+#--------------------------------------------------------------
+# Customized data types
+# see customtypes.h for nore info
+#--------------------------------------------------------------
+
+wsnt__TopicExpressionType = #import "customtypes.h"| wsnt__TopicExpressionTypeCustom
+xsd__dateTime = #import "struct_timeval.h"
+xsd__duration = #import "chrono_duration.h" | xsd__duration

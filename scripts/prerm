@@ -1,0 +1,4 @@
+#!/bin/bash 
+
+sudo /etc/init.d/SphinxDetectors_d stop
+sudo update-rc.d -f SphinxDetectors_d remove

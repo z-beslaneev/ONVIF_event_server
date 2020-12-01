@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<tns1:Device wstop:topic="true" xmlns:wstop="http://docs.oasisopen.org/wsn/t-1" xmlns:tns1="http://www.onvif.org/ver10/topics" xmlns:tmk="http://www.inforion.ru/schemas/sstmk/onvif/topics/sensors" xmlns:tt="http://www.onvif.org/ver10/schema">
+		<tmk:AccessControl wstop:topic="true">
+			<tmk:Accident wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source />
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Name" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Place" Type="xsd:string" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:Accident>
+			<tmk:Fault wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source />
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Name" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Place" Type="xsd:string" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:Fault>
+		</tmk:AccessControl>
+		<tmk:FireAlarm wstop:topic="true">
+			<tmk:Alarm wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source />
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Zone" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:Alarm>
+			<tmk:Fire wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source />
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Zone" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:Fire>
+			<tmk:Fault wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source />
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Zone" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:Fault>
+		</tmk:FireAlarm>
+		<tmk:GasAnalysis wstop:topic="true">
+			<tmk:ConcentrationExceeded wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Place" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="ConcentrationLimit" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="GasType" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Concentration" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:ConcentrationExceeded>
+		</tmk:GasAnalysis>
+		<tmk:Introscopy wstop:topic="true">
+			<tmk:LimitExceeded wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Account" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Picture" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Result" Type="xsd:string" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:LimitExceeded>
+		</tmk:Introscopy>
+		<tmk:NeutronProbing wstop:topic="true">
+			<tmk:Detect wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Place" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="ExplosiveType" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Location" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:Detect>
+		</tmk:NeutronProbing>
+		<tmk:RadiationMonitoring wstop:topic="true">
+			<tmk:Detect wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Picture" Type="xsd:string" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:Detect>
+		</tmk:RadiationMonitoring>
+		<tmk:SteamDetector wstop:topic="true">
+			<tmk:Detect wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Picture" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Account" Type="xsd:string" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:Detect>
+		</tmk:SteamDetector>
+		<tmk:MetalDetector wstop:topic="true">
+			<tmk:Detect wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Picture" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Account" Type="xsd:string" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:Detect>
+		</tmk:MetalDetector>
+		<tmk:VideoSurveillanceSystem wstop:topic="true">
+			<tmk:ChannelDisconnect wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Priority" Type="xsd:int" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:ChannelDisconnect>
+			<tmk:ChannelConnect wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Priority" Type="xsd:int" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:ChannelConnect>
+			<tmk:RecordTurnOff wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Priority" Type="xsd:int" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:RecordTurnOff>
+			<tmk:RecordTurnOn wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Priority" Type="xsd:int" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:RecordTurnOn>
+			<tmk:MotionDetectorTrigger wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Priority" Type="xsd:int" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:MotionDetectorTrigger>
+			<tmk:ReadRecordRequest wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Priority" Type="xsd:int" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:ReadRecordRequest>
+			<tmk:DeleteRecordRequest wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Priority" Type="xsd:int" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:DeleteRecordRequest>
+			<tmk:EditDbRecordRequest wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Priority" Type="xsd:int" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:EditDbRecordRequest>
+			<tmk:CopyDbRecordRequest wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Priority" Type="xsd:int" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:CopyDbRecordRequest>
+			<tmk:Authorization wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Priority" Type="xsd:int" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:Authorization>
+			<tmk:ServerPowerOn wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Priority" Type="xsd:int" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:ServerPowerOn>
+			<tmk:ServerPowerOff wstop:topic="true">
+				<tt:MessageDescription>
+					<tt:Source>
+						<tt:SimpleItemDescription Name="Id" Type="xsd:string" />
+					</tt:Source>
+					<tt:Key />
+					<tt:Data>
+						<tt:SimpleItemDescription Name="Category" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Comment" Type="xsd:string" />
+						<tt:SimpleItemDescription Name="Priority" Type="xsd:int" />
+					</tt:Data>
+				</tt:MessageDescription>
+			</tmk:ServerPowerOff>
+		</tmk:VideoSurveillanceSystem>
+	</tns1:Device>
+</root>

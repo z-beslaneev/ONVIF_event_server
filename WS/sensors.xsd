@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.inforion.ru/schemas/sstmk/onvif/topics/sensors" xmlns:o="http://www.onvif.org/ver10/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="AccessControl">
+		<xs:sequence>
+			<xs:element name="Accident" type="o:MessageDescription" />
+			<xs:element name="Fault" type="o:MessageDescription" />
+		</xs:sequence>
+		<xs:attribute name="topic" type="xs:boolean" use="required" />
+	</xs:complexType>
+	<xs:complexType name="FireAlarm">
+		<xs:sequence>
+			<xs:element name="Alarm" type="o:MessageDescription" />
+			<xs:element name="Fire" type="o:MessageDescription" />
+			<xs:element name="Fault" type="o:MessageDescription" />
+		</xs:sequence>
+		<xs:attribute name="topic" type="xs:boolean" use="required" />
+	</xs:complexType>
+	<xs:complexType name="GasAnalysis">
+		<xs:sequence>
+			<xs:element name="ConcentrationExceeded" type="o:MessageDescription" />
+		</xs:sequence>
+		<xs:attribute name="topic" type="xs:boolean" use="required" />
+	</xs:complexType>
+	<xs:complexType name="Introscopy">
+		<xs:sequence>
+			<xs:element name="LimitExceeded" type="o:MessageDescription"/>
+		</xs:sequence>
+		<xs:attribute name="topic" type="xs:boolean" use="required" />
+	</xs:complexType>
+	<xs:complexType name="NeutronProbing">
+		<xs:sequence>
+			<xs:element name="Detect" type="o:MessageDescription" />
+		</xs:sequence>
+		<xs:attribute name="topic" type="xs:boolean" use="required" />
+	</xs:complexType>
+	<xs:complexType name="RadiationMonitoring">
+		<xs:sequence>
+			<xs:element name="Detect" type="o:MessageDescription" />
+		</xs:sequence>
+		<xs:attribute name="topic" type="xs:boolean" use="required" />
+	</xs:complexType>
+	<xs:complexType name="SteamDetector">
+		<xs:sequence>
+			<xs:element name="Detect" type="o:MessageDescription" />
+		</xs:sequence>
+		<xs:attribute name="topic" type="xs:boolean" use="required" />
+	</xs:complexType>
+	<xs:complexType name="MetalDetector">
+		<xs:sequence>
+			<xs:element name="Detect" type="o:MessageDescription" />
+		</xs:sequence>
+		<xs:attribute name="topic" type="xs:boolean" use="required" />
+	</xs:complexType>
+	<xs:complexType name="VideoSurveillanceSystem">
+		<xs:sequence>
+			<xs:element name="ChannelDisconnect" type="o:MessageDescription" />
+			<xs:element name="ChannelConnect" type="o:MessageDescription"/>
+			<xs:element name="RecordTurnOff" type="o:MessageDescription"/>
+			<xs:element name="RecordTurnOn" type="o:MessageDescription"/>
+			<xs:element name="MotionDetectorTrigger" type="o:MessageDescription" />
+			<xs:element name="ReadRecordRequest" type="o:MessageDescription" />
+			<xs:element name="DeleteRecordRequest" type="o:MessageDescription" />
+			<xs:element name="EditDbRecordRequest" type="o:MessageDescription" />
+			<xs:element name="CopyDbRecordRequest" type="o:MessageDescription" />
+			<xs:element name="Authorization" type="o:MessageDescription"/>
+			<xs:element name="ServerPowerOn" type="o:MessageDescription"/>
+			<xs:element name="ServerPowerOff" type="o:MessageDescription"/>
+		</xs:sequence>
+		<xs:attribute name="topic" type="xs:boolean" use="required" />
+	</xs:complexType>
+</xs:schema>
